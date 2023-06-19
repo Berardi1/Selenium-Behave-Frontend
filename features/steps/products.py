@@ -1,6 +1,5 @@
 from behave import *
 
-
 @given(u'Im logged in')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Given Im logged in')

@@ -1,6 +1,5 @@
 from behave import *
 
-
 @given(u'I navigate to Demoblaze')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Given I navigate to Demoblaze')
@@ -11,7 +10,7 @@ def step_impl(context):
     raise NotImplementedError(u'STEP: Given I am logged in')
 
 
-@given(u'I add a product to the cart')
+@given(u'add a product to the cart')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Given add a product to the cart')
 
@@ -24,6 +23,11 @@ def step_impl(context):
 @then(u'I should see the product')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then I should see the product')
+
+
+@given(u'I add a product to the cart')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given I add a product to the cart')
 
 
 @when(u'open the cart')
@@ -39,11 +43,6 @@ def step_impl(context):
 @then(u'I should see that the purchase is confirmed')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then I should see that the purchase is confirmed')
-
-
-@given(u'I added a product to the cart')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: Given I added a product to the cart')
 
 
 @when(u'I remove the first product')
