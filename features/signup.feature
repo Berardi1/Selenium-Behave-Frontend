@@ -1,4 +1,7 @@
-Feature: Signup Account functionality
+Feature: Signup
+  In order to create my account
+  As a potential customer
+  I want to sing up
 
 
   Background:

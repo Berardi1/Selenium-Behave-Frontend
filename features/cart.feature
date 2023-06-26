@@ -1,4 +1,7 @@
 Feature: Cart
+  In order to complete my purchase
+  As a customer
+  I want to view the cart
 
 
     Background:

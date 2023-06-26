@@ -1,4 +1,8 @@
-Feature: product
+Feature: Product Store
+  In order to buy a product
+  As a customer
+  I want to browse the store
+
 
 
  Background:

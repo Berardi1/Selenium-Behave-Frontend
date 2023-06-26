@@ -1,5 +1,5 @@
 Feature: Login
-  In order to buy a product
+  In order to manage my account
   as a customer
   I want to login
 
