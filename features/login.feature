@@ -7,7 +7,6 @@ Feature: Login
         Given I navigate to Demoblaze
 
 
-
    Scenario:  login with valid parameters
      When I open the login modal
      And I enter valid email and password into the fields
