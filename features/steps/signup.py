@@ -1,9 +1,9 @@
 from behave import *
 
 
-@when(u'I open the signup field')
-def step_impl(context, modal):
-    context.signup_page.open_signup_modal(modal)
+@when('I open the signup modal')
+def step_impl(context):
+    context.signup_page.open_signup_modal
 
 
 @when(u'I enter all my fields')

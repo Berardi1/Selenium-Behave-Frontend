@@ -20,16 +20,20 @@ class BasePage:
         wait = WebDriverWait(self.browser, timeout)
         wait.until(EC.visibility_of_element_located(locator))
 
-    def accept_alert(self):
-        self.wait_alert()
-        Alert(self.browser).accept()
+    def wait_for_alert_message(self, timeout=10):
+        wait = WebDriverWait(self.browser, timeout)
+        wait.until(EC.alert_is_present())
 
-    def text_alert(self):
-        self.wait_alert()
+    def get_alert_text(self):
+        self.wait_for_alert_message()
         return Alert(self.browser).text
+
+    def accept_alert(self):
+        self.wait_for_alert_message()
+        Alert(self.browser).accept()
 
     def visit_web(self, url):
         self.browser.get(url)
 
     def find_element(self, locator):
-        return self.browser.find_element(locator)
+        return self.browser.find_element(*locator)
