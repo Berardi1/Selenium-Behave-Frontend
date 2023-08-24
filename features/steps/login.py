@@ -74,6 +74,7 @@ def step_impl(context):
 
 @then(u'I should get a "{message}" alert')
 def step_impl(context, message):
-    alert_text = context.base_page.get_alert_text()
     expected_message = message
+    alert_text = context.base_page.get_alert_text()
+    context.base_page.accept_alert()
     assert alert_text == expected_message, f"Expected alert: '{expected_message}', Actual alert: '{alert_text}'"

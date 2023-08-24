@@ -1,3 +1,4 @@
+from selenium.common import NoAlertPresentException
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -14,7 +15,8 @@ class BasePage:
         self.browser.implicitly_wait(10)
 
     def wait_alert(self, timeout=10):
-        return WebDriverWait(self.browser, timeout).until(EC.alert_is_present())
+        wait = WebDriverWait(self.browser, timeout)
+        wait.until(EC.alert_is_present())
 
     def wait_visibility_of_element(self, locator, timeout=10):
         wait = WebDriverWait(self.browser, timeout)
@@ -22,7 +24,15 @@ class BasePage:
 
     def wait_for_alert_message(self, timeout=10):
         wait = WebDriverWait(self.browser, timeout)
-        wait.until(EC.alert_is_present())
+
+        def alert_present(driver):
+            try:
+                alert = driver.switch_to.alert
+                return alert
+            except NoAlertPresentException:
+                return False
+
+        wait.until(alert_present)
 
     def get_alert_text(self):
         self.wait_for_alert_message()

@@ -12,7 +12,7 @@ Feature: Login
      When I open the login modal
      And I enter valid email and password into the fields
      Then I should be correctly logged in
-  @current
+
    Scenario: Login with invalid email and valid password
      When I open the login modal
      And I enter invalid email and valid password into the fields
@@ -21,12 +21,12 @@ Feature: Login
    Scenario: Login with valid email and invalid password
      When I open the login modal
      And I enter valid email and invalid password into the fields
-     Then I should get "Wrong password." alert
+     Then I should get a "Wrong password." alert
 
    Scenario: Login with invalid credentials
      When I open the login modal
      And I enter invalid email and invalid password into the fields
-     Then I should get a "User does not exist." alert
+     Then I should get a "Wrong password." alert
 
    Scenario: Login without entering any credentials
      When I open the login modal

@@ -1,3 +1,4 @@
+@signup
 Feature: Signup
   In order to create my account
   As a potential customer
@@ -6,11 +7,11 @@ Feature: Signup
 
   Background:
         Given I navigate to Demoblaze
-
+  @current
   Scenario:  Signup with valid parameters
     When I open the signup modal
     And I enter all my fields
-    Then Account should get created
+    Then I should get a "Sign up successful." alert
 
   Scenario:  Signup with empty username
     When I open the signup modal

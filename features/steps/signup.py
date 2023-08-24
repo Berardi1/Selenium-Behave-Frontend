@@ -1,3 +1,6 @@
+import string
+import random
+
 from behave import *
 
 
@@ -8,11 +11,15 @@ def step_impl(context):
 
 @when(u'I enter all my fields')
 def step_impl(context):
-    # to improve
+    base_username = 'Berardi'
+    random_digits = ''.join(random.choice(string.digits) for _ in range(5))
+    username = f'{base_username}{random_digits}'
+
     credentials = {
-        'username': 'Berardi',
+        'username': username,
         'password': 'contraseña'
     }
+
     context.signup_page.signup_credentials(credentials)
 
 
