@@ -1,3 +1,4 @@
+@cart
 Feature: Cart
   In order to complete my purchase
   As a customer
@@ -6,18 +7,19 @@ Feature: Cart
 
     Background:
         Given I navigate to Demoblaze
-        And I am logged in
+        #And I am logged in
 
 
   Scenario: review products
-        Given add a product to the cart
+        Given I add a product to the cart
         When I open the cart
         Then I should see the product
 
 
   Scenario: purchase order
         Given I add a product to the cart
-        When open the cart
+        When I open the cart
+        And I place the order
         And purchase the order
         Then I should see that the purchase is confirmed
 

@@ -7,7 +7,7 @@ Feature: Signup
 
   Background:
         Given I navigate to Demoblaze
-  @current
+
   Scenario:  Signup with valid parameters
     When I open the signup modal
     And I enter all my fields

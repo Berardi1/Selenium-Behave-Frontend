@@ -7,7 +7,7 @@ Feature: Product Store
 
  Background:
         Given I navigate to Demoblaze
-        And Im logged in
+        #And I am logged in
 
 
   Scenario: open a product
@@ -18,4 +18,4 @@ Feature: Product Store
    Scenario: add a product to cart
         When I open a product
         And I added the product to the cart
-        Then I should see the "Product added." alert message
+        Then I should get a "Product added" alert

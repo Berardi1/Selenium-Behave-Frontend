@@ -1,4 +1,4 @@
-from selenium.common import NoAlertPresentException
+from selenium.common import NoAlertPresentException, NoSuchElementException, TimeoutException
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -47,3 +47,11 @@ class BasePage:
 
     def find_element(self, locator):
         return self.browser.find_element(*locator)
+
+    def wait_for_element_to_be_removed(self, locator, timeout=5):
+        wait = WebDriverWait(self.browser, timeout)
+        try:
+            wait.until(EC.invisibility_of_element_located(locator))
+        except TimeoutException:
+            pass  # Ignore TimeoutException if element is not removed within timeout
+
