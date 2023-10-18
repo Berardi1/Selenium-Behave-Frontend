@@ -5,8 +5,8 @@ Frontend test project using [Python](https://www.python.org/), [Behave](https://
 ## Table of Contents
 
 - [Pre-requisites](#Pre-requisites)
-- [Project Setup](#Project Setup)
-- [Test execution](#testexecution)
+- [Project Setup](#Project-Setup)
+- [Test execution](#tests-execution)
 
 ## Some practices used
 
@@ -17,7 +17,7 @@ Frontend test project using [Python](https://www.python.org/), [Behave](https://
 ## Pre-requisites
 To run this project you need to install `Python3`, `pip` and `venv`. [Google Chrome](https://www.google.com/chrome/) is also needed to be installed.
 
-## Proyect Setup
+## Project Setup
 
 
 **Install Python (Windows)**
@@ -70,7 +70,7 @@ pip3 install -r requirements.txt
 
 # Tests execution
 
-Given all the scenarios are tagged as explained [here](https://github.com/sebalanfranco/BackEndAutomationPython/blob/master/docs/QA.md#scenario-tagging), the tests execution is pretty flexible by using the `behave` command.
+Given all the scenarios are tagged as explained the tests execution is pretty flexible by using the `behave` command.
 
 ## Test suites
 
@@ -80,7 +80,7 @@ Given all the scenarios are tagged as explained [here](https://github.com/sebala
 
 ## Execution commands
 
-First of all, execute the steps in the [Setup](Setup.md) section. Once the setup is completed, execute all or specific test cases as follow. 
+First of all, execute the steps in the [Setup](#project-setup) section. Once the setup is completed, execute all or specific test cases as follow. 
 
 ### All test cases
 
